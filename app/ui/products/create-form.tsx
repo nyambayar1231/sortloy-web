@@ -10,6 +10,8 @@ import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions/categories';
 import { CategoryField } from '@/app/lib/definitions';
 
+// export default function Form({ customers }: { customers: CustomerField[] }) {
+
 export default function Form({ categories }: { categories: CategoryField[] }) {
   const initialState = { message: null, errors: {} };
   const [state, dispatch] = useFormState(createInvoice, initialState);
@@ -155,7 +157,7 @@ export default function Form({ categories }: { categories: CategoryField[] }) {
 
         {/*Product Price */}
         <div className="mb-4">
-          <label htmlFor="name" className="mb-2 block text-sm font-medium">
+          <label htmlFor="price" className="mb-2 block text-sm font-medium">
             Үнэ
           </label>
           <div className="relative mt-2 rounded-md">
@@ -180,6 +182,39 @@ export default function Form({ categories }: { categories: CategoryField[] }) {
               className="mt-2 text-sm text-red-500"
             >
               {state.errors.price.map((error: string) => (
+                <p key={error}>{error}</p>
+              ))}
+            </div>
+          ) : null}
+        </div>
+
+        {/* Product image */}
+        <div className="mb-4">
+          <label htmlFor="image" className="mb-2 block text-sm font-medium">
+            Зураг
+          </label>
+          <div className="relative mt-2 rounded-md">
+            <div className="relative">
+              <input
+                id="image"
+                name="image"
+                type=""
+                step="0.01"
+                placeholder="Барааны зурагийг оруулна уу ..."
+                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                aria-describedby="image-error"
+                required
+              />
+              <ShoppingBagIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+            </div>
+          </div>
+          {state.errors?.image ? (
+            <div
+              id="name-error"
+              aria-live="polite"
+              className="mt-2 text-sm text-red-500"
+            >
+              {state.errors.image.map((error: string) => (
                 <p key={error}>{error}</p>
               ))}
             </div>
