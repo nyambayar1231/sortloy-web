@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
-import Pagination from '@/app/ui/categories/pagination';
 import { CreateProduct } from '@/app/ui/products/buttons';
 
 export const metadata: Metadata = {
