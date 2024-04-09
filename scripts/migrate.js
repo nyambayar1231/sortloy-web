@@ -12,10 +12,6 @@ const client = createClient({
 const db = drizzle(client);
 
 async function main() {
-  console.log('-------<');
-
-  console.log(process.env.DATABASE_URL);
-
   await migrate(db, { migrationsFolder: resolve(__dirname, '../drizzle') });
 }
 

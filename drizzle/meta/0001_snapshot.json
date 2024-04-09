@@ -1,68 +1,9 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "50280fa0-e70b-43c1-8cb5-71f477654fe6",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "62baddb0-1fff-41e1-9b5b-8963cefbe10b",
+  "prevId": "50280fa0-e70b-43c1-8cb5-71f477654fe6",
   "tables": {
-    "categories": {
-      "name": "categories",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "name": {
-          "name": "name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "code": {
-          "name": "code",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "createdUserId": {
-          "name": "createdUserId",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "CURRENT_TIMESTAMP"
-        }
-      },
-      "indexes": {},
-      "foreignKeys": {
-        "categories_createdUserId_user_id_fk": {
-          "name": "categories_createdUserId_user_id_fk",
-          "tableFrom": "categories",
-          "tableTo": "user",
-          "columnsFrom": [
-            "createdUserId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
-    },
     "account": {
       "name": "account",
       "columns": {

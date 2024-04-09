@@ -1,15 +1,15 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "50280fa0-e70b-43c1-8cb5-71f477654fe6",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "1f1648c9-6b7f-479d-890c-8a49da303130",
+  "prevId": "971279fb-f0e6-44af-99d4-6340150c6ce7",
   "tables": {
     "categories": {
       "name": "categories",
       "columns": {
         "id": {
           "name": "id",
-          "type": "text",
+          "type": "integer",
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
