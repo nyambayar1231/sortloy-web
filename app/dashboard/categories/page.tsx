@@ -6,12 +6,10 @@ import { lusitana } from '@/app/ui/fonts';
 import { CategroiesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 
-// import { fetchInvoicesPages } from '@/app/lib/data';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invoices',
+  title: 'Ангилал',
 };
 
 export default async function Page({

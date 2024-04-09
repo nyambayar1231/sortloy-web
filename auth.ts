@@ -5,7 +5,18 @@ import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import { db } from './db';
 
 export const authConfig = {
-  providers: [GitHub, Google],
+  providers: [
+    GitHub,
+    Google({
+      authorization: {
+        params: {
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
+        },
+      },
+    }),
+  ],
   adapter: DrizzleAdapter(db),
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
