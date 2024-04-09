@@ -1,3 +1,4 @@
+import { fetchFilteredCategories } from '@/app/lib/data/categories';
 import Form from '@/app/ui/products/create-form';
 // import Breadcrumbs from '@/app/ui/categories/breadcrumbs';
 
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
+  const categories = await fetchFilteredCategories();
+
   return (
     <main>
       {/* <Breadcrumbs
@@ -20,7 +23,7 @@ export default async function Page() {
           },
         ]}
       /> */}
-      <Form />
+      <Form categories={categories} />
     </main>
   );
 }

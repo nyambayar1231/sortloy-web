@@ -29,6 +29,13 @@
       "when": 1712628396459,
       "tag": "0003_wealthy_bedlam",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1712648325685,
+      "tag": "0004_jittery_absorbing_man",
+      "breakpoints": true
     }
   ]
 }

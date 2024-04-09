@@ -4,7 +4,7 @@ import { SelectCategory, categories } from '@/db/schema/categories';
 import { eq } from 'drizzle-orm';
 
 export async function fetchFilteredCategories(
-  query: string
+  query?: string
 ): Promise<Array<SelectCategory>> {
   noStore();
   try {

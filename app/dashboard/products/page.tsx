@@ -17,8 +17,8 @@ export default async function Page() {
         <h1 className={`${lusitana.className} text-2xl`}>Бараа</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-        {/* <Search placeholder="Бараа хайх..." /> */}
-        {/* <CreateProduct /> */}
+        <Search placeholder="Бараа хайх..." />
+        <CreateProduct />
       </div>
       {/* <Suspense
     key={query + currentPage}
